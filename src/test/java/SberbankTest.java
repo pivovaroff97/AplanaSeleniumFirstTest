@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -17,20 +16,10 @@ public class SberbankTest {
     private WebDriver driver;
 
     private static String SBERBANK = "http://www.sberbank.ru/ru/person";
-    private static String REGION = "//*[@id='main']/div[1]/div/div/div[4]/header/div/div/div/div[2]/div[3]/div/div/a/div/span";
-    private static String SEARCH = "/html/body/div[7]/div/div/div/div/div/div/div/div[1]/div/div/input";
-    private static String NOVGOROD = "/html/body/div[7]/div/div/div/div/div/div/div/div[3]/div[1]/a";
+    private static String REGION = "//*[@class='hd-ft-region__title'][1]";
+    private static String SEARCH = "//*[@class][@type='search']";
+    private static String NOVGOROD = "//*[@class][text()='Нижегородская область']";
     private static String ICONS = "//*[@class='footer__social_item']";
-
-    private static List<String> list = new ArrayList<>();
-    static {
-        list.add("fb");
-        list.add("tw");
-        list.add("yt");
-        list.add("ins");
-        list.add("vk");
-        list.add("ok");
-    }
 
     @Before
     public void setUp() {
